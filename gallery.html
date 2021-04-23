@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Gallery</title>
+    <style >
+    *{padding:0;margin: 0}
+
+    header{
+      background: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    header ul li{
+      display: inline;
+    }
+    header ul{
+      list-style: none;
+    }
+    header a{
+      text-decoration: none;
+      color:black;
+    }
+    header ul, header h1{
+      display: inline-block;
+    }
+    header ul li{
+      text-transform: uppercase;
+      margin:0 10px;
+    }
+
+
+    header .dexiem{
+      text-align: right;
+    }
+       .Gallery{
+         height:100vh;
+         width:100vw;
+         margin: 30px 0;
+         display: none;
+       }
+       .Gallery .GalleyImage{
+        height:100vh;
+        width:95vw;
+        background: black;
+        margin: 0 2%;
+
+      }
+      .Gallery .GalleyImage .GalleyImagesShow img{
+        height:100vh;
+        margin: auto;
+        display: block;
+      }
+
+      .Gallery .GalleyImage .Arrow{
+        display: inline-block;
+
+      }
+      .Gallery .GalleyImage .Arrow .left{
+        transform: rotate(-180deg);
+      }
+      .Gallery .GalleyImage .Arrow .Right{
+        right:0;
+      }
+
+      .Gallery .GalleyImage .Arrow .Arrow1{
+        display: inline-block;
+        position: absolute;
+        background: white;
+        top:50%;
+      }
+      .Gallery .GalleyImage .Arrow img{
+        width:40px;
+        height:40px;
+      }
+      .Gallery .GalleyImage .Arrow .left{
+
+      }
+      #SectionImages{
+        width:90%;
+        margin: auto;
+      }
+      #SectionImages img:hover{
+        filter:none;
+        transform: scale(1.1);
+        transition: 1s all;
+      }
+
+      #SectionImages img{
+        width:25%;
+        display: inline-block;
+         filter: grayscale(100%);
+      }
+      /*Footer*/
+      footer{
+        background:#303036 ;
+      }
+      footer {
+        display: flex;
+        justify-content: space-between;
+      }
+      footer h1{
+        color:white;
+        font-weight: normal;
+      }
+
+      footer a{
+        text-decoration: none;
+        color:white;
+      }
+      footer hr{
+        color:red;
+      }
+      footer ul,footer div{
+        list-style:none;
+        display: inline-block;
+        width:25%;
+        vertical-align: middle;
+      }
+      footer div .social-links a{
+        display: block;
+      }
+      footer a{
+      display: block;
+      }
+      footer a,footer li{
+        text-transform: uppercase;
+        margin: 10px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <ul class="primier">
+        <li><a href="product.html">Voyage</a></li>
+        <li><a href="gallery.html">gallery</a></li>
+          <li><a href="contact.html">contact</a></li>
+      </ul>
+      <h1>Yousra <span> Agence</span></h1>
+      <ul class="dexiem">
+        <li><a href="auto.html">inscription</a></li>
+        <li><a href="login.html">login</a></li>
+
+
+
+      </ul>
+    </header>
+    <div class="Gallery">
+      <div class="GalleyImage">
+        <div class="GalleyImagesShow">
+          <img src="../clot1.jpg" alt="">
+        </div>
+
+            <div class="Arrow">
+              <div class="Arrow1 left">
+                <img src="arrow.png" alt="">
+              </div>
+              <div class="Arrow1 Right">
+                <img src="arrow.png" alt="">
+              </div>
+            </div>
+    </div>
+  </div>
+  <section id="SectionImages">
+    <img src="1.jpg" alt="">
+    <img src="2.jpg" alt="">
+    <img src="3.jpg" alt="">
+    <img src="3.png" alt="">
+
+
+
+  </section>
+  <footer>
+          <ul>
+            <h1>Quick links</h1>
+            <hr>
+            <li><a href="#">about us </a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Site Map</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <ul id="FooterUl">
+            <h1> Contact us </h1>
+            <hr>
+            <li><span></span> <a href="#"> (+212)655555555</a></li>
+            <li><span></span><a href="#">Yousra Voyage </a></li>
+            <li><span></span><a href="#"> vue el mejd n 225 </a></li>
+            <li class="visible"><span><a href="s">Rabat</a></span> </li>
+        </ul>
+      <ul class="footer-col">
+                    <h1> Follow us</h1>
+                    <hr>
+                  <div class="social-links">
+                 <a href="#">facebook</i></a>
+                 <a href="#">Gmail</i></a>
+                 <a href="#">whatsapp</i></a>
+                 <a href="#">twitter </a>
+               </div>
+
+    </ul>
+  </footer>
+  <script type="text/javascript">
+    const Gallery = document.querySelector(".GalleyImagesShow img")
+    const GalleryParent = document.querySelector(".Gallery")
+
+    let GalleryDrop = false;
+    let position = 0;
+
+    const SectionImages = document.querySelector("#SectionImages")
+
+    for(let i =0;i<SectionImages.children.length;i++){
+      SectionImages.children[i].addEventListener("click",()=>{
+
+        if(GalleryDrop ==false){
+          GalleryParent.style.display ="block";
+          GalleryDrop=true;
+        }
+        Gallery.src=  SectionImages.children[i].src;
+        position = i;
+      })
+    }
+
+    const buttonLeft = document.querySelector(".left").addEventListener("click",()=>{
+      moveleft();
+    })
+    const buttonright = document.querySelector(".Right").addEventListener("click",()=>{
+      moveRight();
+    });
+
+
+    function moveleft(){
+      if(position==0){
+        position = SectionImages.children.length-1;
+        Gallery.src=SectionImages.children[position].src;
+                      }
+            else{
+              position--;
+      Gallery.src=SectionImages.children[position].src;
+      console.log(position)}
+    }
+    function moveRight(){
+      if(position==SectionImages.children.length-1){
+        position =0;
+        Gallery.src=SectionImages.children[position].src;
+      }else{
+        position++;
+        Gallery.src=SectionImages.children[position].src;
+        console.log(position)
+      }
+    }
+
+  </script>
+  </body>
+</html>

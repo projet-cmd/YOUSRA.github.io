@@ -1,0 +1,94 @@
+*{padding:0;margin: 0}
+
+body{
+  text-align: center;
+}
+body h1,body h5{
+  text-transform: uppercase;
+}
+form{
+  background: #eeeeee;
+}
+form > div{
+  margin: 20px 0;
+}
+form > div label{
+  display: block;
+  text-transform: uppercase;
+}
+form > div input{
+  width:60%;
+  padding:0.6em;
+}
+form > div textarea{
+  width:60%;
+}
+form button{
+  background: black;
+  border:0;
+  color:white;
+  padding:0.6em 0.9em;
+}
+/*Footer*/
+footer{
+  background:lightblue ;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+footer h1{
+  color:white;
+  font-weight: normal;
+}
+
+footer a{
+  text-decoration: none;
+  color:white;
+}
+footer hr{
+  color:red;
+}
+footer ul,footer div{
+  list-style:none;
+  display: inline-block;
+  width:25%;
+  vertical-align: middle;
+}
+footer div .social-links a{
+  display: block;
+}
+footer a{
+display: block;
+}
+footer a,footer li{
+  text-transform: uppercase;
+  margin: 10px;
+}header{
+  background: lightblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+header ul li{
+  display: inline;
+}
+header ul{
+  list-style: none;
+}
+header a{
+  text-decoration: none;
+  color:black;
+}
+header ul, header h1{
+  display: inline-block;
+}
+header ul li{
+  text-transform: uppercase;
+  margin:0 10px;
+}
+
+
+header .dexiem{
+  text-align: right;
+}

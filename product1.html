@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      <style >
+        *{
+          padding:0;
+          margin: 0;
+        }
+        .content{
+          width:80%;
+          margin: auto;
+        }
+        a{text-decoration: none;
+        color:black;}
+
+        #Produt > div{
+          display: flex;
+        }
+        #Produt .ProductImage{
+          width:40%;
+          height:400px;
+          background: black;
+
+        }
+        #Produt .ProductInfo{
+        width:40%;
+        padding:0 1em;
+        }
+        #Produt .ProductInfo >*{
+          margin: 30px 0;
+        }
+        #Produt .ProductInfo .AddtoCart a{
+          padding:0.5em 1.9em;
+          background: blue;
+          color:white;
+          text-decoration: none;
+          text-transform: uppercase;
+        }
+        .Review form *{
+          margin: 1em 0;
+          padding:1em;
+        }
+        .Review form textarea{
+          width:90%;
+        }
+        .Review form input{
+          width:40%;
+        }
+        .Review form button{
+          width: 20%;
+          background: blue;
+          padding:1em 0;
+          color:white;
+          font-size: 1em;
+          border: none;
+        }
+        img{
+          width:100%;
+          height:100%;
+        }
+
+        /**/
+        /*Footer*/
+        footer{
+          background:lightblue ;
+        }
+        footer {
+          display: flex;
+          justify-content: space-between;
+        }
+        footer h1{
+          color:white;
+          font-weight: normal;
+        }
+
+        footer a{
+          text-decoration: none;
+          color:white;
+        }
+        footer hr{
+          color:red;
+        }
+        footer ul,footer div{
+          list-style:none;
+          display: inline-block;
+          width:25%;
+          vertical-align: middle;
+        }
+        footer div .social-links a{
+          display: block;
+        }
+        footer a{
+        display: block;
+        }
+        footer a,footer li{
+          text-transform: uppercase;
+          margin: 10px;
+        }header{
+          background: lightblue;
+          display: flex;
+          justify-content: space-between;
+          align-items: baseline;
+        }
+        header ul li{
+          display: inline;
+        }
+        header ul{
+          list-style: none;
+        }
+        header a{
+          text-decoration: none;
+          color:black;
+        }
+        header ul, header h1{
+          display: inline-block;
+        }
+        header ul li{
+          text-transform: uppercase;
+          margin:0 10px;
+        }
+
+
+        header .dexiem{
+          text-align: right;
+        }
+      </style>
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <ul class="primier">
+        <li><a href="product.html">Voyage</a></li>
+        <li><a href="gallery.html">gallery</a></li>
+          <li><a href="contact.html">contact</a></li>
+      </ul>
+      <h1>Yousra <span> Agence</span></h1>
+      <ul class="dexiem">
+        <li><a href="auto.html">inscription</a></li>
+        <li><a href="login.html">login</a></li>
+
+
+
+      </ul>
+    </header>
+<section id="Produt">
+  <div class="content">
+    <div class="ProductImage">
+      <img src="1.jpg" alt="">
+    </div>
+    <div class="ProductInfo">
+      <h1>NAME</h1>
+      <h6>SKU :SPROT</h6>
+      <h6>Categories : Dress </h6>
+      <h3>200 $</h3>
+      <p>Lorem lorem lorem lorem lorem</p>
+      <div class="AddtoCart">
+          <a href="#">Travel Now</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+<div class="Review">
+  <div class="content">
+      <form class="" action="index.html" method="post">
+        <input type="text" name="" value="" placeholder="Email">
+        <input type="text" name="" value="" placeholder="Name">
+        <textarea name="name" placeholder="Review"></textarea>
+        <button type="button" name="button">SUBMIT</button>
+      </form>
+  </div>
+</div>
+<footer>
+        <ul>
+          <h1>Quick links</h1>
+          <hr>
+          <li><a href="#">about us </a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Site Map</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <ul id="FooterUl">
+          <h1> Contact us </h1>
+          <hr>
+          <li><span></span> <a href="#"> (+212)655555555</a></li>
+          <li><span></span><a href="#">Yousra Voyage </a></li>
+          <li><span></span><a href="#"> vue el mejd n 225 </a></li>
+          <li class="visible"><span><a href="s">Rabat</a></span> </li>
+      </ul>
+    <ul class="footer-col">
+                  <h1> Follow us</h1>
+                  <hr>
+                <div class="social-links">
+               <a href="#">facebook</i></a>
+               <a href="#">Gmail</i></a>
+               <a href="#">whatsapp</i></a>
+               <a href="#">twitter </a>
+             </div>
+
+  </ul>
+</footer>
+
+
+
+
+
+
+</body>
+</html>

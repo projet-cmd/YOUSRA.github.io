@@ -1,0 +1,98 @@
+*{padding:0;margin: 0}
+body{
+  text-align: center;
+  background: #eeeeee;
+}
+body h1{
+  text-transform: uppercase;
+}
+body form{
+  width:60%;
+  margin: auto;
+}
+body form > div{
+  margin:10px 0;
+}
+body form  label{
+  display: block;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 10px;
+}
+body form  input{
+  width:100%;
+  padding:10px 15px;
+}
+body form  button{
+  width:100%;
+  padding:10px;
+  border: none;
+  background: black;
+  color:white;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: lighter;
+}
+/*Footer*/
+footer{
+  background:lightblue ;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+footer h1{
+  color:white;
+  font-weight: normal;
+}
+
+footer a{
+  text-decoration: none;
+  color:white;
+}
+footer hr{
+  color:blue;
+}
+footer ul,footer div{
+  list-style:none;
+  display: inline-block;
+  width:25%;
+  vertical-align: middle;
+}
+footer div .social-links a{
+  display: block;
+}
+footer a{
+display: block;
+}
+footer a,footer li{
+  text-transform: uppercase;
+  margin: 10px;
+}header{
+  background: lightblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+header ul li{
+  display: inline;
+}
+header ul{
+  list-style: none;
+}
+header a{
+  text-decoration: none;
+  color:black;
+}
+header ul, header h1{
+  display: inline-block;
+}
+header ul li{
+  text-transform: uppercase;
+  margin:0 10px;
+}
+
+
+header .dexiem{
+  text-align: right;
+}
